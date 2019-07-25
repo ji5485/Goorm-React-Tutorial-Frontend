@@ -1,0 +1,22 @@
+## 2019 UOS LikeLion React Tutorial
+
+This repository is Tutorial Codes for React Tutorial. We will learn about React through this class. Here's what you'll learn in class.
+
+1. Set React Development Environment
+2. React Components
+3. Components Styling
+4. State & Props
+5. LifeCycle API
+6. React Hooks
+7. Redux
+8. React-Router
+
+In learning this class, we will proceed with the telephone book project. The result of the project is shown in the picture below.
+
+![project image](react-tutorial-2-images/react-tutorial-2-3.PNG)
+
+The curriculum is like below and will continue to be added. All the learning materials were posted on Notion. The React Tutorial Course and Plans can be found on [the following page](https://www.notion.so/React-Tutorial-Process-392157ed379847f9a4dd6c9d4d3af4ac).
+
+1. [React Tutorial (1) - 리액트 개념 및 개발 환경 설정](https://www.notion.so/React-Tutorial-1-534728c8a74740448ba6d39dbfe695a2)
+2. [React Tutorial (2) - React Components](https://www.notion.so/React-Tutorial-2-React-Components-67b83d89c4e94f9cad77614329da4964)
+3. [React Tutorial (3) - Split Component & Styling](https://www.notion.so/React-Tutorial-3-Split-Component-Styling-8a834d2740e74024895cda40cb67d766)
