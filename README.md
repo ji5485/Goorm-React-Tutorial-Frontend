@@ -20,3 +20,4 @@ The curriculum is like below and will continue to be added. All the learning mat
 1. [React Tutorial (1) - 리액트 개념 및 개발 환경 설정](https://www.notion.so/React-Tutorial-1-534728c8a74740448ba6d39dbfe695a2)
 2. [React Tutorial (2) - React Components](https://www.notion.so/React-Tutorial-2-React-Components-67b83d89c4e94f9cad77614329da4964)
 3. [React Tutorial (3) - Split Component & Styling](https://www.notion.so/React-Tutorial-3-Split-Component-Styling-8a834d2740e74024895cda40cb67d766)
+4. [React Tutorial (4) - State & Props](https://www.notion.so/React-Tutorial-4-State-Props-2514653ff2d6480f9a413ea0c69f70aa)
