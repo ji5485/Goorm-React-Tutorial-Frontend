@@ -22,3 +22,4 @@ The curriculum is like below and will continue to be added. All the learning mat
 3. [React Tutorial (3) - Split Component & Styling](https://www.notion.so/React-Tutorial-3-Split-Component-Styling-8a834d2740e74024895cda40cb67d766)
 4. [React Tutorial (4) - State & Props](https://www.notion.so/React-Tutorial-4-State-Props-2514653ff2d6480f9a413ea0c69f70aa)
 5. [React Tutorial (5) - State & Props 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-5-State-Props-fc5cd2380bca4403bcbb89335520381f)
+6. [React Tutorial (6) - LifeCycle API](https://www.notion.so/React-Tutorial-6-LifeCycle-API-7e2d8361803f4d50a5bb8d65e332557b)
