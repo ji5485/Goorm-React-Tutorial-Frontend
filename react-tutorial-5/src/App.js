@@ -26,7 +26,7 @@ class App extends Component {
       dummyData: {
         ...dummyData,
         [nextId]: {
-          id: nextId,
+          id: String(nextId),
           name,
           phone
         }
@@ -39,8 +39,7 @@ class App extends Component {
   };
 
   handleRemove = id => {
-    const { dummyData } = this.state;
-    delete dummyData[id];
+    const { [id]: _, ...dummyData } = this.state.dummyData;
 
     this.setState({ dummyData });
   };
