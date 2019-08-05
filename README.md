@@ -11,9 +11,10 @@ This repository is Tutorial Codes for React Tutorial. We will learn about React 
 7. Redux
 8. React-Router
 
-In learning this class, we will proceed with the telephone book project. The result of the project is shown in the picture below.
+In learning this class, we will proceed with the telephone book project and counter project. The result of the project is shown in the picture below.
 
-![project image](react-tutorial-2-images/react-tutorial-2-3.PNG)
+![counter project image](react-tutorial-4-images/react-tutorial-4-1.PNG)
+![telephone book project image](react-tutorial-2-images/react-tutorial-2-3.PNG)
 
 The curriculum is like below and will continue to be added. All the learning materials were posted on Notion. The React Tutorial Course and Plans can be found on [the following page](https://www.notion.so/React-Tutorial-Process-392157ed379847f9a4dd6c9d4d3af4ac).
 
@@ -23,3 +24,4 @@ The curriculum is like below and will continue to be added. All the learning mat
 4. [React Tutorial (4) - State & Props](https://www.notion.so/React-Tutorial-4-State-Props-2514653ff2d6480f9a413ea0c69f70aa)
 5. [React Tutorial (5) - State & Props 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-5-State-Props-fc5cd2380bca4403bcbb89335520381f)
 6. [React Tutorial (6) - LifeCycle API](https://www.notion.so/React-Tutorial-6-LifeCycle-API-7e2d8361803f4d50a5bb8d65e332557b)
+7. [React Tutorial (7) - React Hooks](https://www.notion.so/React-Tutorial-7-React-Hooks-5c744b80aeb440cc9ca7e559ba40a6ed)
