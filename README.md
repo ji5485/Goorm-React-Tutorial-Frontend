@@ -25,3 +25,5 @@ The curriculum is like below and will continue to be added. All the learning mat
 5. [React Tutorial (5) - State & Props 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-5-State-Props-fc5cd2380bca4403bcbb89335520381f)
 6. [React Tutorial (6) - LifeCycle API](https://www.notion.so/React-Tutorial-6-LifeCycle-API-7e2d8361803f4d50a5bb8d65e332557b)
 7. [React Tutorial (7) - React Hooks](https://www.notion.so/React-Tutorial-7-React-Hooks-5c744b80aeb440cc9ca7e559ba40a6ed)
+8. [React Tutorial (8) - React Hooks 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-8-React-Hooks-48f7979df91c402dac6faa74cf7f9437)
+9. [React Tutorial (9) - React Redux](https://www.notion.so/React-Tutorial-9-React-Redux-2079199aebfd437cbd342cb02949bc95)
