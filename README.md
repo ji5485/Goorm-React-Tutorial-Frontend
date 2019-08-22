@@ -9,7 +9,7 @@ This repository is Tutorial Codes for React Tutorial. We will learn about React 
 5. LifeCycle API
 6. React Hooks
 7. Redux
-8. React-Router
+8. Connect React with Restful Server
 
 In learning this class, we will proceed with the telephone book project and counter project. The result of the project is shown in the picture below.
 
@@ -27,3 +27,4 @@ The curriculum is like below and will continue to be added. All the learning mat
 7. [React Tutorial (7) - React Hooks](https://www.notion.so/React-Tutorial-7-React-Hooks-5c744b80aeb440cc9ca7e559ba40a6ed)
 8. [React Tutorial (8) - React Hooks 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-8-React-Hooks-48f7979df91c402dac6faa74cf7f9437)
 9. [React Tutorial (9) - React Redux](https://www.notion.so/React-Tutorial-9-React-Redux-2079199aebfd437cbd342cb02949bc95)
+10. [React Tutorial (10) - React Redux 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-10-React-Redux-5de5b026f81c42c683f997823a7fc515)
