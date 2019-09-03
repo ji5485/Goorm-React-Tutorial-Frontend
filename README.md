@@ -28,3 +28,5 @@ The curriculum is like below and will continue to be added. All the learning mat
 8. [React Tutorial (8) - React Hooks 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-8-React-Hooks-48f7979df91c402dac6faa74cf7f9437)
 9. [React Tutorial (9) - React Redux](https://www.notion.so/React-Tutorial-9-React-Redux-2079199aebfd437cbd342cb02949bc95)
 10. [React Tutorial (10) - React Redux 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-10-React-Redux-5de5b026f81c42c683f997823a7fc515)
+11. [React Tutorial (11) - Django Restful API 구축하기]() - 준비중
+12. [React Tutorial (12) - Django 서버와 연결하기](https://www.notion.so/React-Tutorial-12-Django-8d9d40ea09194b4590bce9558ceb0d61)
