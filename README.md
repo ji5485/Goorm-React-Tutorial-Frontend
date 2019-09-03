@@ -14,7 +14,7 @@ This repository is Tutorial Codes for React Tutorial. We will learn about React 
 In learning this class, we will proceed with the telephone book project and counter project. The result of the project is shown in the picture below.
 
 ![counter project image](react-tutorial-4-images/react-tutorial-4-1.PNG)
-![telephone book project image](react-tutorial-2-images/react-tutorial-2-3.PNG)
+![telephone book project image](react-tutorial-2-images/react-tutorial-2-2.PNG)
 
 The curriculum is like below and will continue to be added. All the learning materials were posted on Notion. The React Tutorial Course and Plans can be found on [the following page](https://www.notion.so/React-Tutorial-Process-392157ed379847f9a4dd6c9d4d3af4ac).
 
