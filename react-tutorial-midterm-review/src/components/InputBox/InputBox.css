@@ -1,0 +1,19 @@
+.input-box {
+  width: 100%;
+}
+
+.input-box + .input-box {
+  margin-top: 20px;
+}
+
+.input-box__name {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.input-box__input {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
