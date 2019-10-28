@@ -8,12 +8,10 @@ import * as dataActions from "./store/modules/data";
 import useInput from "./lib/hooks/useInput";
 
 const App = ({ data, dataActions }) => {
-  const [state, onChange, setInitialValue] = useInput({
+  const [{ name, phone }, onChange, setInitialValue] = useInput({
     name: "",
     phone: ""
   });
-
-  const { name, phone } = state;
 
   const handleSubmit = () => {
     if (name === "" || phone === "") return;

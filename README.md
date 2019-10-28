@@ -10,6 +10,7 @@ This repository is Tutorial Codes for React Tutorial. We will learn about React 
 6. React Hooks
 7. Redux
 8. Connect React with Restful Server
+9. React Router Dom (Mid-Term Review)
 
 In learning this class, we will proceed with the telephone book project and counter project. The result of the project is shown in the picture below.
 
@@ -30,3 +31,5 @@ The curriculum is like below and will continue to be added. All the learning mat
 10. [React Tutorial (10) - React Redux 전화번호부에 적용하기](https://www.notion.so/React-Tutorial-10-React-Redux-5de5b026f81c42c683f997823a7fc515)
 11. [React Tutorial (11) - Django Restful API 구축하기]() - 준비중
 12. [React Tutorial (12) - Django 서버와 연결하기](https://www.notion.so/React-Tutorial-12-Django-8d9d40ea09194b4590bce9558ceb0d61)
+
+React Tutorial Mid Term Review - 로그인과 마이페이지 기능 구현하기
