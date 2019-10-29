@@ -13,10 +13,10 @@ class Main extends React.Component {
   };
 
   componentDidMount() {
-    this.initialize();
+    this.checkLogin();
   }
 
-  initialize = () => {
+  checkLogin = () => {
     const logged = storage.get("logged");
 
     this.setState({
@@ -42,7 +42,7 @@ class Main extends React.Component {
       if (database[i].id === id && database[i].password === password) {
         storage.set("logged", true);
         storage.set("userInfo", database[i]);
-        this.initialize();
+        this.checkLogin();
         break;
       }
     }
@@ -51,7 +51,7 @@ class Main extends React.Component {
   handleLogout = () => {
     storage.set("logged", false);
     storage.set("userInfo", {});
-    this.initialize();
+    this.checkLogin();
   };
 
   render() {

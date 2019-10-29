@@ -9,10 +9,10 @@ class Signup extends React.Component {
   };
 
   componentDidMount() {
-    this.initialize();
+    this.checkLogin();
   }
 
-  initialize = () => {
+  checkLogin = () => {
     const logged = storage.get("logged");
 
     if (!logged) {
