@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import PhoneBook
+from api.views import PhoneBook, CounterClass
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/phone/', PhoneBook.as_view(), name='api')
+    path('api/phone/', PhoneBook.as_view(), name='phone'),
+    path('api/counter/', CounterClass.as_view(), name='counter')
 ]

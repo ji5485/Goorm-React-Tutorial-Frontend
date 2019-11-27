@@ -7,3 +7,9 @@ class Phone(models.Model):
 
   def __str__(self):
     return '{} {}'.format(self.name, self.phone)
+
+class Counter(models.Model):
+  number = models.IntegerField(default=0)
+  
+  def __str__(self):
+    return str(self.number)

@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import PhoneSerializer
-from .models import Phone
+from .serializers import PhoneSerializer, CounterSerializer
+from .models import Phone, Counter
 
 # Create your views here.
 
@@ -30,3 +30,18 @@ class PhoneBook(APIView):
     post = Phone.objects.get(id=id)
     post.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
+
+class CounterClass(APIView):
+  def get(self, request, format=None):
+    queryset = Counter.objects.all()
+
+    if queryset.count() == 0:
+      counter = Counter()
+      counter.save()
+      queryset = Counter.objects.all()
+
+    serializer = CounterSerializer(queryset)
+    return Response(serializer.data)
+
+  def post(self, request, format=None):
+    pass
