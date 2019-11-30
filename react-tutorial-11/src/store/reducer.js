@@ -1,11 +1,13 @@
 import { createAction, handleActions } from "redux-actions";
+import * as API from "../lib/api";
 import produce from "immer";
+import { pender } from "redux-pender";
 
-const INCREASE = "INCREASE";
-const DECREASE = "DECREASE";
+const GET_NUM = "reducer/GET_NUM";
+const SET_NUM = "reducer/SET_NUM";
 
-export const increase = createAction(INCREASE, number => number);
-export const decrease = createAction(DECREASE, number => number);
+export const getNum = createAction(GET_NUM, API.getNumber);
+export const setNum = createAction(SET_NUM, API.setNumber);
 
 const initialState = {
   number: 0
@@ -13,14 +15,20 @@ const initialState = {
 
 export default handleActions(
   {
-    [INCREASE]: (state, action) =>
-      produce(state, draft => {
-        draft.number = action.payload;
-      }),
-    [DECREASE]: (state, action) =>
-      produce(state, draft => {
-        draft.number = action.payload;
-      })
+    ...pender({
+      type: GET_NUM,
+      onSuccess: (state, action) =>
+        produce(state, draft => {
+          draft.number = action.payload.data;
+        })
+    }),
+    ...pender({
+      type: SET_NUM,
+      onSuccess: (state, action) =>
+        produce(state, draft => {
+          draft.number = action.payload.data;
+        })
+    })
   },
   initialState
 );

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CountButton from "./components/CountButton";
+import CountInput from "./components/CountInput";
 import Number from "./components/Number";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import * as counter from "./store/reducer";
+import * as countFunc from "./store/reducer";
 import { bindActionCreators } from "redux";
 
 const Wrapper = styled.div`
@@ -22,24 +23,54 @@ const ButtonWrapper = styled.div`
   margin-bottom: 50px;
 `;
 
-const App = ({ number, counter }) => {
+const App = ({ number, countFunc }) => {
+  const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    const getNumber = async () => {
+      try {
+        await countFunc.getNum();
+      } catch (e) {
+        console.warn(e);
+      }
+    };
+
+    getNumber();
+  }, []);
+
+  const handleCount = e => {
+    const value = e.target.value;
+
+    setCount(value);
+  };
+
+  const handleClick = async type => {
+    try {
+      if (type === "plus") await countFunc.setNum(number + parseInt(count));
+      else if (type === "minus")
+        await countFunc.setNum(number - parseInt(count));
+    } catch (e) {
+      console.warn(e);
+    }
+  };
+
   return (
     <Wrapper>
+      <CountInput count={count} onChange={handleCount} />
       <ButtonWrapper>
-        <CountButton onClick={() => counter.increase(number + 1)} text="+" />
-        <CountButton onClick={() => counter.decrease(number - 1)} text="-" />
+        <CountButton onClick={() => handleClick("plus")} text="+" />
+        <CountButton onClick={() => handleClick("minus")} text="-" />
       </ButtonWrapper>
       <Number number={number} />
     </Wrapper>
   );
 };
 
-const mapStateToProps = state => ({
-  number: state.number
-});
-
-const mapDispatchToProps = dispatch => ({
-  counter: bindActionCreators(counter, dispatch)
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(
+  state => ({
+    number: state.reducer.number
+  }),
+  dispatch => ({
+    countFunc: bindActionCreators(countFunc, dispatch)
+  })
+)(App);

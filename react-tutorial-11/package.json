@@ -11,6 +11,7 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-actions": "^2.6.5",
+    "redux-pender": "^2.0.12",
     "styled-components": "^4.4.1"
   },
   "scripts": {
@@ -33,5 +34,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:8000"
 }
