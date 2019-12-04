@@ -1,58 +1,47 @@
-import { createAction, handleActions } from 'redux-actions';
-import producer from 'immer';
+import { createAction, handleActions } from "redux-actions";
+import { produce } from "immer";
+import { pender } from "redux-pender";
+import * as API from "../../lib/api/api";
 
-const APPEND_DATA = 'data/APPEND_DATA';
-const REMOVE_DATA = 'data/REMOVE_DATA';
+const GET_DATA_LIST = "data/GET_DATA_LIST";
+const APPEND_DATA = "data/APPEND_DATA";
+const REMOVE_DATA = "data/REMOVE_DATA";
 
-export const appendData = createAction(APPEND_DATA, data => data);
-export const removeData = createAction(REMOVE_DATA, id => id);
+export const getDataList = createAction(GET_DATA_LIST, API.getPhoneList);
+export const appendData = createAction(APPEND_DATA, API.appendPhone);
+export const removeData = createAction(REMOVE_DATA, API.removePhone);
 
-const initialState = {
-  "0": {
-    id: "0",
-    name: "John",
-    phone: "010-0000-0000"
-  },
-  "1": {
-    id: "1",
-    name: "Peter",
-    phone: "010-1111-1111"
-  },
-  "2": {
-    id: "2",
-    name: "Elise",
-    phone: "010-2222-2222"
-  },
-  "3": {
-    id: "3",
-    name: "Chris",
-    phone: "010-3333-3333"
-  },
-  "4": {
-    id: "4",
-    name: "Austin",
-    phone: "010-4444-4444"
-  },
-  "5": {
-    id: "5",
-    name: "Adam",
-    phone: "010-5555-5555"
-  }
-};
+const initialState = {};
 
-var nextId = Object.keys(initialState).length;
+export default handleActions(
+  {
+    ...pender({
+      type: GET_DATA_LIST,
+      onSuccess: (state, action) =>
+        produce(state, draft => {
+          const list = action.payload.data;
 
-export default handleActions({
-  [APPEND_DATA]: (state, action) =>
-    producer(state, draft => {
-      draft[nextId] = {
-        id: nextId,
-        ...action.payload
-      };
-      nextId++;
+          for (let item of list) draft[item.id] = item;
+        })
     }),
-  [REMOVE_DATA]: (state, action) =>
-    producer(state, draft => {
-      delete draft[action.payload];
+    ...pender({
+      type: APPEND_DATA,
+      onSuccess: (state, action) =>
+        produce(state, draft => {
+          const item = action.payload.data;
+
+          draft[item.id] = item;
+        })
+    }),
+    ...pender({
+      type: REMOVE_DATA,
+      onSuccess: (state, action) =>
+        produce(state, draft => {
+          const id = action.payload.data.id;
+
+          delete draft[id];
+        })
     })
-}, initialState);
+  },
+  initialState
+);

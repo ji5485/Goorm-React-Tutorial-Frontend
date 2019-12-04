@@ -1,12 +1,10 @@
-import reducer from "./reducer";
-import penderMiddleware, { penderReducer as pender } from "redux-pender";
-import { createStore, combineReducers, compose, applyMiddleware } from "redux";
+import reducer from "./modules";
+import penderMiddleware from "redux-pender";
+import { createStore, compose, applyMiddleware } from "redux";
 
 const getStore = () => {
-  const reducers = combineReducers({ reducer, pender });
-
   const store = createStore(
-    reducers,
+    reducer,
     compose(
       applyMiddleware(penderMiddleware()),
       window.__REDUX_DEVTOOLS_EXTENSION__ &&

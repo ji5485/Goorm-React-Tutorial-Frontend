@@ -1,5 +1,5 @@
 import { createAction, handleActions } from "redux-actions";
-import * as API from "../lib/api";
+import * as API from "../../lib/api";
 import produce from "immer";
 import { pender } from "redux-pender";
 

@@ -1,31 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import InputBox from "./components/InputBox";
 import PhoneList from "./components/PhoneList";
 import "./App.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as dataActions from "./store/modules/data";
+import * as dataFunc from "./store/modules/data";
 import useInput from "./lib/hooks/useInput";
 
-const App = ({ data, dataActions }) => {
+const App = ({ data, dataFunc }) => {
   const [{ name, phone }, onChange, setInitialValue] = useInput({
     name: "",
     phone: ""
   });
 
-  const handleSubmit = () => {
+  useEffect(() => {
+    const getDataList = async () => {
+      try {
+        await dataFunc.getDataList();
+      } catch (e) {
+        console.warn(e);
+      }
+    };
+
+    getDataList();
+  }, []);
+
+  const handleSubmit = async () => {
     if (name === "" || phone === "") return;
 
-    dataActions.appendData({
-      name,
-      phone
-    });
+    try {
+      await dataFunc.appendData({
+        name,
+        phone
+      });
+    } catch (e) {
+      console.warn(e);
+    }
 
     setInitialValue();
   };
 
-  const handleRemove = id => {
-    dataActions.removeData(id);
+  const handleRemove = async id => {
+    try {
+      await dataFunc.removeData(id);
+    } catch (e) {
+      console.warn(e);
+    }
   };
 
   return (
@@ -46,6 +66,6 @@ export default connect(
     data: state.data
   }),
   dispatch => ({
-    dataActions: bindActionCreators(dataActions, dispatch)
+    dataFunc: bindActionCreators(dataFunc, dispatch)
   })
 )(App);

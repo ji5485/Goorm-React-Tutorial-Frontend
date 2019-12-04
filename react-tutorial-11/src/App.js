@@ -4,7 +4,7 @@ import CountInput from "./components/CountInput";
 import Number from "./components/Number";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import * as countFunc from "./store/reducer";
+import * as countFunc from "./store/modules/count";
 import { bindActionCreators } from "redux";
 
 const Wrapper = styled.div`
@@ -41,14 +41,13 @@ const App = ({ number, countFunc }) => {
   const handleCount = e => {
     const value = e.target.value;
 
-    setCount(value);
+    setCount(parseInt(value));
   };
 
   const handleClick = async type => {
     try {
-      if (type === "plus") await countFunc.setNum(number + parseInt(count));
-      else if (type === "minus")
-        await countFunc.setNum(number - parseInt(count));
+      if (type === "plus") await countFunc.setNum(number + count);
+      else if (type === "minus") await countFunc.setNum(number - count);
     } catch (e) {
       console.warn(e);
     }
@@ -68,7 +67,7 @@ const App = ({ number, countFunc }) => {
 
 export default connect(
   state => ({
-    number: state.reducer.number
+    number: state.count.number
   }),
   dispatch => ({
     countFunc: bindActionCreators(countFunc, dispatch)
